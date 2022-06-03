@@ -8,7 +8,7 @@
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support/>
-  <Project>https://github.com/hrfee/jfa-go</Project>
+  <Project>https://jfa-go.com/</Project>
   <Overview>jfa-go is a user management app for Jellyfin (and now Emby) that provides invite-based account creation as well as other features that make one's instance much easier to manage.</Overview>
   <Category>Tools:</Category>
   <WebUI>http://[IP]:[PORT:8056]/</WebUI>
@@ -17,12 +17,12 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1654237101</DateInstalled>
+  <DateInstalled>1654272799</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>jfa-go is a user management app for Jellyfin (and now Emby) that provides invite-based account creation as well as other features that make one's instance much easier to manage.</Description>
   <Networking>
-    <Mode>bridge</Mode>
+    <Mode>dockernet</Mode>
     <Publish>
       <Port>
         <HostPort>8056</HostPort>
@@ -46,6 +46,6 @@
   <Environment/>
   <Labels/>
   <Config Name="WebUI Port" Target="8056" Default="8056" Mode="tcp" Description="Container Port: 8056" Type="Port" Display="always" Required="false" Mask="false">8056</Config>
-  <Config Name="Config Dir" Target="/data" Default="/mnt/user/appdata/jfa-go" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/jfa-go</Config>
+  <Config Name="Config Directory" Target="/data" Default="/mnt/user/appdata/jfa-go" Mode="rw" Description="Container Path: /data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/jfa-go</Config>
   <Config Name="Jellyfin Config Directory" Target="/jf" Default="/mnt/user/appdata/Jellyfin/config/" Mode="rw" Description="Path to jellyfin config directory" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/Jellyfin/config/</Config>
 </Container>
