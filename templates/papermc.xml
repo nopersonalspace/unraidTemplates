@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>PaperMC</Name>
+  <Repository>phyremaster/papermc</Repository>
+  <Registry>https://hub.docker.com/r/phyremaster/papermc</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>A PaperMC for Minecraft container</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1662867704</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>A PaperMC for Minecraft container</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>25565</HostPort>
+        <ContainerPort>25565</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>25565</HostPort>
+        <ContainerPort>25565</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/papermc</HostDir>
+      <ContainerDir>/papermc</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>1.19.2</Value>
+      <Name>MC_VERSION</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Minecraft Server Port (TCP)" Target="25565" Default="" 
+Mode="tcp" Description="Container Port: 25565" Type="Port" 
+Display="always" Required="false" Mask="false">25565</Config>
+  <Config Name="Minecraft Server Port (TCP)" Target="25565" Default="" 
+Mode="udp" Description="Container Port: 25565" Type="Port" 
+Display="always" Required="false" Mask="false">25565</Config>
+  <Config Name="App Path" Target="/papermc" Default="" Mode="rw" 
+Description="Path for the server files" Type="Path" Display="always" 
+Required="false" Mask="false">/mnt/user/appdata/papermc</Config>
+  <Config Name="Minecraft Version" Target="MC_VERSION" Default="" Mode="" 
+Description="Must be supported by PaperMC" Type="Variable" 
+Display="always" Required="false" Mask="false">1.19.2</Config>
+</Container>
